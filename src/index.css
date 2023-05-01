@@ -1,13 +1,920 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@charset "utf-8"; body, table, input, textarea, select, button, th, td, input, select, textarea, th, td, p, dl, dt, dd, li, pre {
+  font-family: -apple-system, BlinkMacSystemFont, Apple SD Gothic Neo, Roboto, Noto Sans CJK KR, Tahoma, 'Noto Sans KR', 'Gmarket Sans', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#event__wrapper {
+  overflow: hidden;
+  min-width: 980px
+}
+
+#event__wrapper .box__event--container > div {
+  box-sizing: border-box
+}
+
+.section__event {
+  position: relative
+}
+
+.sprite__expedia, .sprite__expedia--before::before, .sprite__expedia--after::after {
+  display: inline-block;
+  background: url(http://image.gmarket.co.kr/Gmkt_Event/2023/01/0101_expedia/sprite__expedia.png) no-repeat 0 0/1000px 1000px;
+}
+
+.sprite__expedia--before::before, .sprite__expedia--after::after {
+  content: '';
+}
+
+.js-box__fixed #tab__navigation--category {
+  position: fixed;
+  z-index: 100;
+  top: 72px;
+  width: 100%
+}
+
+#anchor_hotel, #anchor_coupon {
+  position: relative;
+  top: -142px
+}
+
+.box__event--header {
+  position: relative;
+  height: 595px;
+  background-color: #202843;
+}
+
+.box__event--header .box__header-swiper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 1920px;
+  width: 100%;
+  height: 595px
+}
+
+.box__event--header .box__header-swiper .swiper-container {
+  height: 595px;
+}
+
+.box__event--header .box__header-swiper::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #232323;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.box__event--header .box__header-swiper .image {
+  width: 100%;
+}
+
+.box__event--header .box__header-visual {
+  position: absolute;
+  top: 107px;
+  left: 50%;
+  width: 614px;
+  height: 376px;
+  transform: translateX(-50%);
+  background: url(http://image.gmarket.co.kr/Gmkt_Event/2023/01/0101_expedia/image__header-title.png) no-repeat 0 0/contain;
+}
+
+.box__event--header .box__header-visual-0116 {
+  background: url(http://image.gmarket.co.kr/Gmkt_Event/2023/01/0101_expedia/0116/image__header-title.png) no-repeat 0 0/contain;
+}
+
+.box__event--header .box__header-visual-0130 {
+  background: url(http://image.gmarket.co.kr/Gmkt_Event/2023/01/0101_expedia/0130/image__header-title.png) no-repeat 0 0/contain;
+}
+
+.box__navigation--category {
+  height: 70px;
+}
+
+.box__navigation--category .list {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  background-color: #202843;
+  justify-content: center;
+}
+
+.box__navigation--category .list .list-item .link {
+  display: block;
+  width: 240px;
+  height: 70px;
+}
+
+.box__navigation--category .list .list-item1 .link {
+  background-position: 0 -72px;
+}
+
+.box__navigation--category .list .list-item2 .link {
+  background-position: -242px -72px;
+}
+
+.box__navigation--category .list .list-item3 .link {
+  background-position: -484px -72px;
+}
+
+.box__navigation--category .list .list-item4 .link {
+  background-position: -726px -72px;
+}
+
+.box__navigation--category .list .list-item1 .link.active {
+  background-position: 0 0;
+}
+
+.box__navigation--category .list .list-item2 .link.active {
+  background-position: -242px 0;
+}
+
+.box__navigation--category .list .list-item3 .link.active {
+  background-position: -484px 0;
+}
+
+.box__navigation--category .list .list-item4 .link.active {
+  background-position: -726px 0;
+}
+
+.box__section1 {
+  padding-bottom: 100px;
+  background-color: #ffc70c;
+}
+
+.box__section1 .box__title-area {
+  width: 830px;
+  height: 808px;
+  margin: 0 auto;
+  background: url(http://image.gmarket.co.kr/Gmkt_Event/2023/01/0101_expedia/image__section1.png) no-repeat 0 0/contain;
+  padding-bottom: 100px;
+}
+
+.box__section1-0116 {
+  padding-bottom: 100px;
+}
+
+.box__section1-0116 .box__title-area {
+  padding-bottom: 0;
+  background: url(http://image.gmarket.co.kr/Gmkt_Event/2023/01/0101_expedia/0116/image__section1.png) no-repeat 0 0/contain;
+}
+
+.box__event--container .box__section1-0116 .button {
+  width: 420px;
+  height: 84px;
+  margin: 50px auto 0;
+  background-position: 0 -726px;
+}
+
+.box__section1-0130 .box__title-area {
+  height: 738px;
+  background: url(http://image.gmarket.co.kr/Gmkt_Event/2023/01/0101_expedia/0130/image__section1.png) no-repeat 0 0/contain;
+}
+
+/* box__section1 ~ box__section3 까지 공통요소 */
+.box__event--container .button {
+  display: block;
+  width: 326px;
+  height: 80px;
+  margin: 0 auto;
+  background-position: -674px -226px;
+}
+
+.box__event--container .button:disabled {
+  background-position: -674px -144px;
+  pointer-events: none;
+}
+
+.box__event--container .button__notice {
+  display: block;
+  width: 330px;
+  height: 44px;
+  margin: 40px auto 0;
+  background-position: 0 -144px;
+}
+
+.box__event--container .button__notice.active {
+  background-position: 0 -190px;
+}
+
+.box__event--container .list__notice {
+  width: 420px;
+  margin: 30px auto 0
+}
+
+.box__event--container .list__notice .list-item {
+  font-size: 14px;
+  line-height: 26px;
+  color: #444;
+  font-family: "Gmarket Sans";
+}
+
+.box__section2 {
+  background-color: #f1f1f1;
+  padding-bottom: 100px;
+}
+
+.box__section2 .box__title-area {
+  width: 830px;
+  height: 545px;
+  margin: 0 auto;
+  background: url(http://image.gmarket.co.kr/Gmkt_Event/2023/01/0101_expedia/image__section2.png) no-repeat 0 0/contain;
+}
+
+.box__section2-0130 .box__title-area {
+  background: url(http://image.gmarket.co.kr/Gmkt_Event/2023/01/0101_expedia/0130/image__section2.png) no-repeat 0 0/contain;
+}
+
+.box__section3 {
+  background-color: #e3e3e3;
+  padding-bottom: 100px;
+}
+
+.box__section3 .box__title-area {
+  width: 830px;
+  height: 615px;
+  margin: 0 auto;
+  background: url(http://image.gmarket.co.kr/Gmkt_Event/2023/01/0101_expedia/image__section3.png) no-repeat 0 0/contain;
+}
+
+.box__section3-0130 .box__title-area {
+  background: url(http://image.gmarket.co.kr/Gmkt_Event/2023/01/0101_expedia/0130/image__section3.png) no-repeat 0 0/contain;
+}
+
+.box__section4 {
+  background-color: #f1f1f1;
+  padding-bottom: 100px;
+}
+
+.box__section4 .box__title-area {
+  width: 830px;
+  height: 615px;
+  margin: 0 auto;
+  background: url(http://image.gmarket.co.kr/Gmkt_Event/2023/01/0101_expedia/image__section4.png) no-repeat 0 0/contain;
+}
+
+.box__section4-0130 .box__title-area {
+  background: url(http://image.gmarket.co.kr/Gmkt_Event/2023/01/0101_expedia/0130/image__section4.png) no-repeat 0 0/contain;
+}
+
+.box__event--container .box__section4 .list__notice {
+  width: 465px
+}
+
+.box__section5 {
+  background-color: #222;
+  padding-bottom: 120px;
+}
+
+.box__section5 .box__title-area {
+  width: 830px;
+  height: 297px;
+  margin: 0 auto;
+  background: url(http://image.gmarket.co.kr/Gmkt_Event/2023/01/0101_expedia/image__section5.png) no-repeat 0 0/contain;
+}
+
+.box__section5 .box__content-area {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.box__section5 .box__content-area .text__title {
+  font-size: 30px;
+  letter-spacing: -0.5px;
+  color: #fff;
+  font-family: "Gmarket Sans";
+}
+
+.box__section5 .box__content-area .text__title .text__keyword {
+  color: #ffc70c;
+}
+
+.box__section5 .box__tab-contents {
+  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+}
+
+.box__section5 .box__tab-contents .link__tab {
+  padding: 18px 25px;
+  height: 52px;
+  background-color: #2f2f2f;
+  border: 1px solid #2f2f2f;
+  border-radius: 30px;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.box__section5 .box__tab-contents .link__tab .text {
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+  color: #fff;
+  font-family: "Gmarket Sans";
+}
+
+.box__section5 .box__tab-contents .link__tab.active {
+  border: 1px solid #ffc70c;
+}
+
+.box__section5 .box__tab-contents .link__tab.active .text {
+  color: #ffc70c;
+}
+
+.box__section5 .box__tab-contents .link__tab + .link__tab {
+  margin-left: 6px
+}
+
+.box__section5 .box__tab-contents + .text__title {
+  padding-top: 80px
+}
+
+.box__section5 .text__desc {
+  opacity: 0.6;
+  margin-top: 18px;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+  color: #fff;
+  font-family: "Gmarket Sans";
+}
+
+.box__section5 .list__radio + .text__title {
+  font-size: 36px
+}
+
+.box__section5 .list__radio {
+  margin-top: 40px;
+}
+
+.box__section5 .list__radio .box__label {
+  position: relative;
+  display: block;
+  margin: 10px auto 0;
+  width: 500px
+}
+
+.box__section5 .list__radio .box__label .input__radio {
+  position: absolute;
+  left: 22px;
+  top: 16px;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  background-position: -614px -144px;
+  margin-right: 12px;
+}
+
+.box__section5 .list__radio .box__label .input__radio:checked {
+  background-position: -644px -144px;
+}
+
+.box__section5 .list__radio .box__label .text {
+  display: flex;
+  color: #fff;
+  font-size: 18px;
+  line-height: 60px;
+  width: 500px;
+  height: 60px;
+  background-color: #2f2f2f;
+  border-radius: 8px;
+  text-align: left;
+  padding-left: 64px;
+  box-sizing: border-box;
+  align-items: baseline;
+  border: 1px solid #2f2f2f;
+  font-family: "Gmarket Sans";
+}
+
+.box__section5 .list__radio .box__label .input__radio:checked + .text {
+  color: #ffc70c;
+  border: 1px solid #ffc70c;
+  background-color: #222;
+}
+
+.box__section5 .list__radio + .text__title {
+  padding-top: 120px;
+}
+
+.box__section5 .list__products {
+  width: 1200px;
+  margin: 50px auto 0;
+  font-size: 0
+}
+
+.box__section5 .list__products .list-item {
+  display: inline-block;
+  width: 590px;
+  vertical-align: top;
+}
+
+.box__section5 .list__products .list-item:nth-child(even) {
+  margin-left: 20px
+}
+
+.box__section5 .list__products .list-item .image {
+  width: 100%;
+}
+
+.box__section5 .list__products .link {
+  display: block;
+  width: 394px;
+  height: 80px;
+  margin: 32px auto 90px;
+  background-position: 0 -318px;
+}
+
+.box__section5 .list__products .list-item__soldout .link {
+  display: block;
+  width: 394px;
+  height: 80px;
+  margin: 32px auto 90px;
+  background-position: 0 -236px;
+  pointer-events: none;
+}
+
+.box__section5 .button__more {
+  display: block;
+  margin: 10px auto 0;
+  width: 420px;
+  height: 84px;
+  background-position: 0 -400px;
+}
+
+.box__section6 {
+  background-color: #ffc70c;
+  padding-bottom: 30px;
+}
+
+.box__section6 .box__title-area {
+  width: 830px;
+  height: 297px;
+  margin: 0 auto;
+  background: url(http://image.gmarket.co.kr/Gmkt_Event/2023/01/0101_expedia/image__section6.png) no-repeat 0 0/contain;
+}
+
+.box__section6 .box__content-area {
+  margin-top: 36px;
+  text-align: center;
+}
+
+.box__section6 .box__content-area .text__title {
+  font-size: 36px;
+  letter-spacing: -0.5px;
+  color: #222;
+  font-family: "Gmarket Sans";
+}
+
+.box__section6 .box__content-area .text__title .text__keyword {
+  color: #00488a;
+}
+
+.box__section6 .box__tab-contents {
+  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+}
+
+.box__section6 .box__tab-contents .link__tab {
+  height: 52px;
+  padding: 18px 25px;
+  background-color: rgba(47, 47, 47, 0.1);
+  border-radius: 30px;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.box__section6 .box__tab-contents .link__tab .text {
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+  color: #444;
+  font-family: "Gmarket Sans";
+}
+
+.box__section6 .box__tab-contents .link__tab.active {
+  background-color: #00488a;
+}
+
+.box__section6 .box__tab-contents .link__tab.active .text {
+  color: #fff
+}
+
+.box__section6 .box__tab-contents .link__tab + .link__tab {
+  margin-left: 6px
+}
+
+.box__section6 .box__tab-contents + .text__title {
+  margin-top: 100px
+}
+
+.box__section6 .list__products {
+  width: 1200px;
+  margin: 50px auto 0;
+  font-size: 0;
+  text-align: left;
+}
+
+.box__section6 .list__products .list-item {
+  display: inline-block;
+  width: 590px;
+  vertical-align: top;
+  text-align: center;
+}
+
+.box__section6 .list__products .list-item:nth-child(even) {
+  margin-left: 20px
+}
+
+.box__section6 .list__products .list-item .text__title {
+  display: block;
+  height: 32px;
+  margin: 30px 0 14px;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+  color: #000;
+  font-weight: 500;
+  font-family: "Gmarket Sans";
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.box__section6 .list__products .list-item .text__price {
+  display: block;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: -0.5px;
+  color: #000;
+  font-weight: bold;
+  font-family: "Gmarket Sans";
+}
+
+.box__section6 .list__products .list-item .box__thumb {
+  position: relative;
+  display: block;
+  width: 590px;
+  height: 296px;
+  overflow: hidden;
+}
+
+.box__section6 .list__products .list-item .image {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.box__section6 .list__products .link {
+  display: block;
+  width: 394px;
+  height: 80px;
+  margin: 32px auto 90px;
+  background-position: -606px -394px;
+}
+
+.box__section6 .list__products .list-item__soldout .link {
+  display: block;
+  width: 394px;
+  height: 80px;
+  margin: 32px auto 90px;
+  background-position: 0 -236px;
+  pointer-events: none;
+}
+
+.box__section7 {
+  background-color: #202843;
+  padding-bottom: 100px;
+}
+
+.box__section7 .box__title-area {
+  width: 830px;
+  height: 297px;
+  margin: 0 auto;
+  background: url(http://image.gmarket.co.kr/Gmkt_Event/2023/01/0101_expedia/image__section7.png) no-repeat 0 0/contain;
+}
+
+.box__section7 .box__info-swiper {
+  text-align: center;
+  position: relative;
+  width: 1372px;
+  margin: 0 auto;
+}
+
+.box__section7 .box__info-swiper .image {
+  width: 1352px
+}
+
+.box__section7 .box__info-swiper .swiper-pagination {
+  width: 100%;
+  position: absolute;
+  bottom: -30px
+}
+
+.box__section7 .box__info-swiper .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  margin: 0 5px
+}
+
+.box__section7 .box__info-swiper .swiper-button-prev {
+  left: -70px;
+  width: 38px;
+  height: 73px;
+  background: url(http://image.gmarket.co.kr/Gmkt_Event/2023/01/0101_expedia/image__left.png) no-repeat 0 0/contain;
+}
+
+.box__section7 .box__info-swiper .swiper-button-next {
+  right: -70px;
+  width: 38px;
+  height: 73px;
+  background: url(http://image.gmarket.co.kr/Gmkt_Event/2023/01/0101_expedia/image__right.png) no-repeat 0 0/contain;
+}
+
+.box__section7 .button__more {
+  display: block;
+  margin: 96px auto 0;
+  width: 420px;
+  height: 84px;
+  background-position: -580px -308px;
+}
+
+.box__section8 {
+  background-color: #00c400;
+  padding-bottom: 130px;
+}
+
+.box__section8 .box__title-area {
+  width: 830px;
+  height: 654px;
+  margin: 0 auto;
+  background: url(http://image.gmarket.co.kr/Gmkt_Event/2023/01/0101_expedia/image__section8.png) no-repeat 0 0/contain;
+}
+
+.box__section8 .button__more {
+  display: block;
+  margin: 60px auto 0;
+  width: 420px;
+  height: 84px;
+  background-position: 0 -486px;
+}
+
+/* 공유하기 */
+.box__sns-share {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 44px;
+  width: 1200px;
+  margin: 0 auto
+}
+
+.button__sns-share {
+  position: absolute;
+  right: -6px;
+  top: 0;
+  width: 70px;
+  height: 70px;
+  border: 0;
+  background-position: -332px -144px;
+}
+
+.ico-share {
+  display: inline-block;
+  overflow: hidden;
+  background: url(http://image.gmarket.co.kr/Gmkt_Event/2022/05/0502_smilemembers/sprite-front-share.png) no-repeat;
+  text-indent: -999em
+}
+
+.layer_share {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 3010;
+  width: 300px;
+  height: 296px;
+  margin-left: -150px;
+  margin-top: -143px
+}
+
+.layer_share .layer_title {
+  position: relative;
+  z-index: 120;
+  height: 37px;
+  border: 1px solid #979797;
+  border-bottom-color: #e5e5e5;
+  border-radius: 2px 2px 0 0;
+  background: #fff;
+  text-align: center;
+  line-height: 37px
+}
+
+.layer_share .layer_title .title {
+  display: block;
+  font-size: 16px;
+  color: #233549;
+  line-height: 37px
+}
+
+.layer_share .layer_title .btn_close {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 38px;
+  height: 38px;
+  background: none;
+  border: 0;
+  cursor: pointer
+}
+
+.layer_share .layer_title .btn_close .ico-share {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 38px;
+  height: 38px;
+  background-position: -402px 0
+}
+
+.layer_share .layer_content {
+  position: relative;
+  z-index: 120;
+  height: 256px;
+  background: #fff;
+  border: 1px solid #979797;
+  border-top: 0 none;
+  border-radius: 0 0 2px 2px
+}
+
+.layer_share .layer_content .share_content {
+  padding: 26px 0 0 28px
+}
+
+.layer_share .layer_content .share_content .list_share {
+  overflow: hidden;
+  height: 164px;
+  padding-bottom: 8px
+}
+
+.layer_share .layer_content .share_content .list_item {
+  float: left;
+  position: relative;
+  width: 66px;
+  height: 66px;
+  margin: 0 22px 16px 0
+}
+
+.layer_share .layer_content .share_content .list_item .ico-share {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 66px;
+  height: 66px
+}
+
+.layer_share .layer_content .share_content .list_item.kakao .ico-share {
+  background-position: 0 0
+}
+
+.layer_share .layer_content .share_content .list_item.facebook .ico-share {
+  background-position: -68px 0
+}
+
+.layer_share .layer_content .share_content .list_item.twiter .ico-share {
+  background-position: -136px 0
+}
+
+.layer_share .layer_content .share_content .list_item.line .ico-share {
+  background-position: -204px 0
+}
+
+.layer_share .layer_content .url_copy {
+  position: relative;
+  padding: 0 85px 0 23px
+}
+
+.layer_share .layer_content .url_copy .url {
+  overflow: hidden;
+  width: 170px;
+  height: 33px;
+  padding: 0 8px 0 10px;
+  border: 1px solid #d6d7d8;
+  border-radius: 2px;
+  font-size: 15px;
+  color: #222;
+  line-height: 33px;
+  letter-spacing: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.layer_share .layer_content .url_copy .btn_copy {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 23px;
+  width: 54px;
+  height: 33px;
+  border: 1px solid #d6d7d8;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #3d424b;
+  text-align: center;
+  line-height: 33px
+}
+
+.layer_share .dimmed_share {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.4)
+}
+
+/* 팝업 */
+.box__layer {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0
+}
+
+.box__layer .box__layer-inner {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  padding: 32px 16px 16px;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  background: #fff;
+  border-radius: 8px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+.box__layer .dimmed {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.box__layer .text__title {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+.box__layer .text__small {
+  display: block;
+  font-size: 11px;
+  line-height: 20px;
+  color: #757575;
+}
+
+.box__layer .box__coupon {
+  display: block;
+  width: 198px;
+  margin: 16px auto;
+}
+
+.box__layer .box__coupon .image {
+  width: 100%
+}
+
+.box__layer .button {
+  display: block;
+  width: 100%;
+  margin-top: 32px;
+  background-color: #966e46;
+  border-radius: 8px;
+  font-size: 16px;
+  height: 44px;
+  padding-top: 1px;
+  font-weight: 500;
+  box-sizing: border-box;
+  color: #fff;
+  line-height: 43px;
+  font-family: Gmarket Sans,'Gmarket Sans',sans-serif;
+}
+
+.box__layer--sorry .text__title + .text__small {
+  margin-top: 10px
 }
