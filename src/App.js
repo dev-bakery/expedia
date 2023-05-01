@@ -37,11 +37,14 @@ function App() {
           ref={targetRef}>
           <Nav />
         </div>
-        <div className='box__anchor'>
+        <div id='box__anchor1' className='box__anchor'>
           <SectionBenefit />
           <SectionCoupon />
           <SectionOverlap />
         </div>
+        <div id='box__anchor2' className='box__anchor'></div>
+        <div id='box__anchor3' className='box__anchor'></div>
+        <div id='box__anchor4' className='box__anchor'></div>
       </div>
     </RecoilRoot>
   );
