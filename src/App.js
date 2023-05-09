@@ -2,7 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import { RecoilRoot } from "recoil";
 import SectionBenefit from "./components/contents/sectionBenefit";
 import SectionCoupon from "./components/contents/sectionCoupon";
+import SectionFavorite from "./components/contents/sectionFavorite";
+import SectionHotel from "./components/contents/sectionHotel";
 import SectionOverlap from "./components/contents/sectionOverlap";
+import SectionTour from "./components/contents/sectionTour";
 import Header from "./components/header/header";
 import Nav from "./components/nav/nav";
 
@@ -42,9 +45,15 @@ function App() {
           <SectionCoupon />
           <SectionOverlap />
         </div>
-        <div id='box__anchor2' className='box__anchor'></div>
-        <div id='box__anchor3' className='box__anchor'></div>
-        <div id='box__anchor4' className='box__anchor'></div>
+        <div id='box__anchor2' className='box__anchor'>
+          <SectionHotel />
+        </div>
+        <div id='box__anchor3' className='box__anchor'>
+          <SectionTour />
+        </div>
+        <div id='box__anchor4' className='box__anchor'>
+          <SectionFavorite />
+        </div>
       </div>
     </RecoilRoot>
   );

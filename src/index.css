@@ -27,7 +27,7 @@
 .js-box__fixed #tab__navigation--category {
   position: fixed;
   z-index: 100;
-  top: 72px;
+  top: 0;
   width: 100%
 }
 
