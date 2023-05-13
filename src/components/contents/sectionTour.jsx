@@ -43,8 +43,8 @@ export default function SectionTour() {
           </a>
         </div>
         <h3 className='text__title'>
-          미리 사면 유용한 <strong className='text__keyword'>오사카</strong>{" "}
-          여행 필수품
+          미리 사면 유용한 <strong className='text__keyword'>오사카</strong>여행
+          필수품
         </h3>
         <ul className='list__products'>
           <li className='list-item'>
