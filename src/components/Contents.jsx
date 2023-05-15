@@ -1,9 +1,8 @@
 import React, { forwardRef } from "react";
 
 const Contents = ({ i }, ref) => {
-  console.log(i, ref);
   return (
-    <div id={`anchor${i + 1}`} className='box__anchor'>
+    <div ref={ref} id={`anchor${i + 1}`} className='box__anchor'>
       {i === 0 && (
         <>
           <div className='box__section1 box__section1-0116'>

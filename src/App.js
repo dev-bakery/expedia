@@ -11,10 +11,10 @@ function App() {
   const [targetIndex, setTargetIndex] = useState(0);
   const moveToPage = (index) => {
     setTargetIndex(index);
-    // contentRef.current[index].scrollIntoView({
-    //   behavior: "smooth",
-    //   display: "start",
-    // });
+    contentRef.current[index].scrollIntoView({
+      behavior: "smooth",
+      display: "start",
+    });
   };
 
   const targetRef = useRef(null);
@@ -52,7 +52,11 @@ function App() {
                 <a
                   href={`#anchor${i + 1}`}
                   onClick={() => moveToPage(i)}
-                  className='link sprite__expedia'>
+                  className={
+                    targetIndex === i
+                      ? `link sprite__expedia active`
+                      : `link sprite__expedia`
+                  }>
                   <span className='for-a11y'>{navTitles[i]}</span>
                 </a>
               </li>
