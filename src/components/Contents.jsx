@@ -70,7 +70,7 @@ const Contents = ({ i }, ref) => {
         </>
       )}
       {i === 1 && (
-        <>
+        <div className='box__section5'>
           <div className='box__title-area'>
             <h2 className='for-a11y'>내게 딱 맞는 해외 호텔 찾기</h2>
             <p className='for-a11y'>한국인들의 평점이 높은 호텔만 골랐어요</p>
@@ -151,10 +151,10 @@ const Contents = ({ i }, ref) => {
               <span className='for-a11y'>다른 호텔 찾아보기</span>
             </button>
           </div>
-        </>
+        </div>
       )}
       {i === 2 && (
-        <>
+        <div className='box__section6'>
           <div className='box__title-area'>
             <h2 className='for-a11y'>패스/현지투어도 둘러보세요</h2>
             <p className='for-a11y'>가장 많이 찾는 상품을 추천드릴게요</p>
@@ -255,10 +255,10 @@ const Contents = ({ i }, ref) => {
               </li>
             </ul>
           </div>
-        </>
+        </div>
       )}
       {i === 3 && (
-        <>
+        <div className='box__section7'>
           <div className='box__title-area'>
             <h2 className='for-a11y'>이렇게 검색하세요</h2>
             <p className='for-a11y'>
@@ -298,7 +298,7 @@ const Contents = ({ i }, ref) => {
               <span className='for-a11y'>호텔 검색하러 가기</span>
             </a>
           </div>
-        </>
+        </div>
       )}
     </div>
   );

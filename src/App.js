@@ -19,6 +19,8 @@ function App() {
 
   const targetRef = useRef(null);
   const [navFixed, setNavFixed] = useState(false);
+  useEffect(() => {});
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
