@@ -8,7 +8,7 @@ function App() {
   const page = 4;
   const navTitles = ["할인혜택", "호텔 찾기", "즐길거리", "검색 가이드"];
   const contentRef = useRef([]);
-  const [targetIndex, setTargetIndex] = useState(0);
+  const [targetIndex, setTargetIndex] = useState(null);
   const moveToPage = (index) => {
     setTargetIndex(index);
     contentRef.current[index].scrollIntoView({
@@ -33,6 +33,7 @@ function App() {
       setNavFixed(true);
     } else {
       setNavFixed(false);
+      setTargetIndex(null);
     }
   };
   return (
