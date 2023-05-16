@@ -4,7 +4,7 @@ import Header from "./components/header/header";
 import Contents from "./components/Contents";
 
 function App() {
-  // let offsetArr = [];
+  let offsetArr = [];
   const page = 4;
   const navTitles = ["할인혜택", "호텔 찾기", "즐길거리", "검색 가이드"];
   const contentRef = useRef([]);
@@ -19,7 +19,26 @@ function App() {
 
   const targetRef = useRef(null);
   const [navFixed, setNavFixed] = useState(false);
-  useEffect(() => {});
+
+  const handleScroll = (e) => {
+    const { scrollTop } = e.target.scrollingElement;
+    setTargetIndex(
+      offsetArr.findIndex(([from, to]) => scrollTop >= from && scrollTop < to)
+    );
+    if (window.scrollY >= targetRef.current.offsetTop) {
+      setNavFixed(true);
+    } else {
+      setNavFixed(false);
+      setTargetIndex(null);
+    }
+  };
+
+  useEffect(() => {
+    offsetArr = Array.from(contentRef.current).map((item, i) => {
+      const [offsetTop, scrollHeight] = [item.offsetTop, item.clientHeight];
+      return [offsetTop - scrollHeight, offsetTop + scrollHeight - 70];
+    });
+  }, [offsetArr]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -28,14 +47,6 @@ function App() {
     };
   }, []);
 
-  const handleScroll = () => {
-    if (window.scrollY >= targetRef.current.offsetTop) {
-      setNavFixed(true);
-    } else {
-      setNavFixed(false);
-      setTargetIndex(null);
-    }
-  };
   return (
     <RecoilRoot>
       <Header />
