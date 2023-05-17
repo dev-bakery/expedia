@@ -1,71 +1,18 @@
 import React, { forwardRef } from "react";
+import Section1 from "./contents/Section1";
+import Section2 from "./contents/Section2";
+import Section3 from "./contents/Section3";
+import Section4 from "./contents/Section4";
 
 const Contents = ({ i }, ref) => {
   return (
     <div ref={ref} id={`anchor${i + 1}`} className='box__anchor'>
       {i === 0 && (
         <>
-          <div className='box__section1 box__section1-0116'>
-            <div className='box__title-area'>
-              <h2 className='for-a11y'>전 세계 50만개 호텔을 특가에 만나요</h2>
-              <p className='for-a11y'>
-                Expedia 회원 혜택을 G마켓에서 누리세요!
-              </p>
-              <ul className='for-a11y'>
-                <li>해외항공 결제하면 최대 10만원 중복 쿠폰</li>
-                <li>카드사 추가 할인 최대 2만원 즉시 할인</li>
-                <li>
-                  할인이 안된다면 캐시백! 최대 10만원 스마일캐시(할인쿠폰
-                  사용불가 호텔 결제시)
-                </li>
-              </ul>
-            </div>
-            <a
-              href='http://rpp.gmarket.co.kr/?exhib=18596'
-              target='_blank'
-              rel='noreferrer'
-              className='button sprite__expedia'>
-              <span className='for-a11y'>쿠폰받기</span>
-            </a>
-          </div>
-          <div className='box__section2 box__section2-0130'>
-            <div className='box__title-area'>
-              <h2 className='for-a11y'>누구나 매일매일 5% 할인쿠폰</h2>
-              <p className='for-a11y'>발급 당일 사용 가능</p>
-            </div>
-            <button type='button' className='button sprite__expedia'>
-              <span className='for-a11y'>쿠폰받기</span>
-            </button>
-            <button type='button' className='button__notice sprite__expedia'>
-              <span className='for-a11y'>유의사항을 확인해주세요</span>
-            </button>
-          </div>
-          <div className='box__section3 box__section3-0130'>
-            <div id='anchor_coupon'></div>
-            <div className='box__title-area'>
-              <h2 className='for-a11y'>
-                해외 항공 구매 고객 대상 5% 중복 할인
-              </h2>
-              <p className='for-a11y'>발급 당일 사용 가능</p>
-            </div>
-            <button type='button' className='button sprite__expedia'>
-              <span className='for-a11y'>쿠폰받기</span>
-            </button>
-            <button type='button' className='button__notice sprite__expedia'>
-              <span className='for-a11y'>유의사항을 확인해주세요</span>
-            </button>
-          </div>
-          <div className='box__section4 box__section4-0130'>
-            <div className='box__title-area'>
-              <h2 className='for-a11y'>일부 브랜드 호텔 대상 5% 스마일캐시</h2>
-              <p className='for-a11y'>
-                입실일 기준 익월 15일 일괄 지급, 20만원이상 결제 시 최대 10만원
-              </p>
-            </div>
-            <button type='button' className='button__notice sprite__expedia'>
-              <span className='for-a11y'>유의사항을 확인해주세요</span>
-            </button>
-          </div>
+          <Section1 />
+          <Section2 />
+          <Section3 />
+          <Section4 />
         </>
       )}
       {i === 1 && (

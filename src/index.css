@@ -2,6 +2,10 @@
   font-family: -apple-system, BlinkMacSystemFont, Apple SD Gothic Neo, Roboto, Noto Sans CJK KR, Tahoma, 'Noto Sans KR', 'Gmarket Sans', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #event__wrapper {
   overflow: hidden;
   min-width: 980px

@@ -9,13 +9,6 @@ function App() {
   const navTitles = ["할인혜택", "호텔 찾기", "즐길거리", "검색 가이드"];
   const contentRef = useRef([]);
   const [targetIndex, setTargetIndex] = useState(null);
-  const moveToPage = (index) => {
-    setTargetIndex(index);
-    contentRef.current[index].scrollIntoView({
-      behavior: "smooth",
-      display: "start",
-    });
-  };
 
   const targetRef = useRef(null);
   const [navFixed, setNavFixed] = useState(false);
@@ -25,6 +18,7 @@ function App() {
     setTargetIndex(
       offsetArr.findIndex(([from, to]) => scrollTop >= from && scrollTop < to)
     );
+
     if (window.scrollY >= targetRef.current.offsetTop) {
       setNavFixed(true);
     } else {
@@ -36,7 +30,7 @@ function App() {
   useEffect(() => {
     offsetArr = Array.from(contentRef.current).map((item, i) => {
       const [offsetTop, scrollHeight] = [item.offsetTop, item.clientHeight];
-      return [offsetTop - scrollHeight, offsetTop + scrollHeight - 70];
+      return [offsetTop - scrollHeight, offsetTop + scrollHeight];
     });
   }, [offsetArr]);
 
@@ -63,7 +57,6 @@ function App() {
               <li className={`list-item list-item${i + 1}`}>
                 <a
                   href={`#anchor${i + 1}`}
-                  onClick={() => moveToPage(i)}
                   className={
                     targetIndex === i
                       ? `link sprite__expedia active`
