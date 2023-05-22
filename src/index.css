@@ -608,7 +608,9 @@ html {
   width: 1372px;
   margin: 0 auto;
 }
-
+.box__section7 .box__info-swiper .swiper{
+  overflow: hidden;
+}
 .box__section7 .box__info-swiper .image {
   width: 1352px
 }

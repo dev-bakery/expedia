@@ -3,6 +3,7 @@ import Section1 from "./contents/Section1";
 import Section2 from "./contents/Section2";
 import Section3 from "./contents/Section3";
 import Section4 from "./contents/Section4";
+import SwiperContainer from "./contents/swiper/swiperContainer";
 
 const Contents = ({ i }, ref) => {
   return (
@@ -213,28 +214,7 @@ const Contents = ({ i }, ref) => {
           </div>
           <div className='box__content-area'>
             <div className='box__info-swiper'>
-              <div className='swiper-container'>
-                <div className='swiper-wrapper'>
-                  <div className='swiper-slide'>
-                    <img
-                      src='http://image.gmarket.co.kr/Gmkt_Event/2023/01/0101_expedia/image__slide1.png'
-                      className='image'
-                      alt=''
-                    />
-                  </div>
-                  <div className='swiper-slide'>
-                    <img
-                      src='http://image.gmarket.co.kr/Gmkt_Event/2023/01/0101_expedia/image__slide2.png'
-                      className='image'
-                      alt=''
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className='swiper-button-prev'></div>
-              <div className='swiper-button-next'></div>
-              <div className='swiper-pagination'></div>
+              <SwiperContainer />
             </div>
             <a
               href='https://gtour.gmarket.co.kr/TourV2/Search/Hotelmain'
