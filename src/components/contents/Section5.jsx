@@ -4,9 +4,8 @@ import arrayData from "../../api/data";
 
 export default function Section5() {
   const [activeIndex, setActiveIndex] = useState(0);
-  // const [data, setData] = useState(arrayData);
+  const [activeTheme, setActiveTheme] = useState(0);
 
-  console.log(arrayData);
   return (
     <div className='box__section5'>
       <div className='box__title-area'>
@@ -15,21 +14,30 @@ export default function Section5() {
       </div>
       <div className='box__content-area'>
         <h3 className='text__title'>
-          <strong className='text__keyword'>{arrayData[0].title}</strong>를
-          선택하셨네요
+          <strong className='text__keyword'>
+            {arrayData[activeIndex].title}
+          </strong>
+          를 선택하셨네요
         </h3>
         <div className='box__tab-contents'>
           {arrayData.map((item, index) => {
             return (
-              <a href='' className='link__tab' key={index}>
+              <a
+                href='javascript;'
+                className={
+                  activeIndex === index ? `link__tab active` : `link__tab`
+                }
+                key={index}>
                 <span className='text'>{arrayData[index].title}</span>
               </a>
             );
           })}
         </div>
         <h3 id='anchor_city' className='text__title'>
-          <strong className='text__keyword'>{arrayData[0].title}</strong>에서
-          어떤 여행을 하고 싶으세요?
+          <strong className='text__keyword'>
+            {arrayData[activeIndex].title}
+          </strong>
+          에서 어떤 여행을 하고 싶으세요?
         </h3>
         <p className='text__desc'>테마에 맞는 호텔을 찾아드릴게요</p>
         <ul className='list__radio'>
@@ -44,6 +52,7 @@ export default function Section5() {
                     name='hotel1'
                     id={`hotel${index + 1}_${index + 1}`}
                     className='input__radio sprite__expedia'
+                    checked={activeTheme === index ? `checked` : ``}
                   />
                   <span className='text'>{arrayData[index].theme[index]}</span>
                 </label>
@@ -53,8 +62,10 @@ export default function Section5() {
         </ul>
         <h3 id='anchor_theme' className='text__title'>
           당신이 좋아할
-          <strong className='text__keyword'>{arrayData[0].title}</strong>호텔을
-          찾았어요!
+          <strong className='text__keyword'>
+            {arrayData[activeIndex].title}
+          </strong>
+          호텔을 찾았어요!
         </h3>
         <ul className='list__products'>
           {arrayData[activeIndex].products[activeIndex].map((item, index) => {
