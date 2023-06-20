@@ -54,7 +54,7 @@ function App() {
           ref={targetRef}>
           <ul className='list' id='tab__navigation--category'>
             {Array.from({ length: page }).map((_, i) => (
-              <li className={`list-item list-item${i + 1}`}>
+              <li className={`list-item list-item${i + 1}`} key={i}>
                 <a
                   href={`#anchor${i + 1}`}
                   className={

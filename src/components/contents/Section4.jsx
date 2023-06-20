@@ -24,22 +24,22 @@ export default function Section4() {
         <span className='for-a11y'>유의사항을 확인해주세요</span>
       </button>
       {active && (
-        <ul class='list__notice'>
-          <li class='list-item'>
+        <ul className='list__notice'>
+          <li className='list-item'>
             ∙ 대상 : 할인쿠폰 사용이 불가한 일부 브랜드 호텔 결제 시 스마일캐시
             지급
           </li>
-          <li class='list-item'>
+          <li className='list-item'>
             ∙ 지급 : 입실일 기준 익월 15일 구매자 ID로 일괄 지급
           </li>
-          <li class='list-item'>∙ 사용 : 지급 후 3개월 이내</li>
-          <li class='list-item'>
+          <li className='list-item'>∙ 사용 : 지급 후 3개월 이내</li>
+          <li className='list-item'>
             ∙ 할인쿠폰과 스마일캐시 중복 사용은 불가합니다
           </li>
-          <li class='list-item'>
+          <li className='list-item'>
             ∙ 본 이벤트는 당사의 사정으로 예고없이 변경, 조기종료될 수 있습니다
           </li>
-          <li class='list-item'>
+          <li className='list-item'>
             ∙ 입실 전 취소할 경우 캐시백 지급 대상에서 제외됩니다
           </li>
         </ul>

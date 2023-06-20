@@ -26,17 +26,21 @@ export default function Section3() {
         <span className='for-a11y'>유의사항을 확인해주세요</span>
       </button>
       {active && (
-        <ul class='list__notice'>
-          <li class='list-item'>
+        <ul className='list__notice'>
+          <li className='list-item'>
             ∙ 발급 대상 : 2022. 12. 1 (목) 이후 해외 항공 결제 고객
           </li>
-          <li class='list-item'>∙ 발급 기간 : 2023. 1. 30 (월) ~ 2. 12 (일)</li>
-          <li class='list-item'>∙ 사용 기간 : 2023. 1. 30 (월) ~ 2. 12 (일)</li>
-          <li class='list-item'>∙ 발급 기회 : 기간 내 ID 당 1회</li>
-          <li class='list-item'>
+          <li className='list-item'>
+            ∙ 발급 기간 : 2023. 1. 30 (월) ~ 2. 12 (일)
+          </li>
+          <li className='list-item'>
+            ∙ 사용 기간 : 2023. 1. 30 (월) ~ 2. 12 (일)
+          </li>
+          <li className='list-item'>∙ 발급 기회 : 기간 내 ID 당 1회</li>
+          <li className='list-item'>
             ∙ 할인 대상 : expedia 전 세계 호텔 (일부 브랜드호텔 사용 불가)
           </li>
-          <li class='list-item'>
+          <li className='list-item'>
             ∙ 본 쿠폰은 당사의 사정으로 예고없이 변경, 조기종료될 수 있습니다
           </li>
         </ul>
