@@ -56,7 +56,8 @@ html {
   height: 595px
 }
 
-.box__event--header .box__header-swiper .swiper-container {
+.box__event--header .box__header-swiper .swiper {
+  overflow: hidden;
   height: 595px;
 }
 
